@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FastTooth</string>
+    <string name="cadastro_cpf_info">Confirme o seu CPF para checarmos\n se você já possui cadastro</string>
+    <string name="possui_conta">Já possui conta? <font fgcolor='#439CFC'> Faça login aqui</font></string>
+
+    <string name="mensagem_cadastro">Tornando seu sorriso mais saudável\nsem nenhuma dificuldade</string>
+    <string name="termos_politica">Eu aceito os <font fgcolor='#439CFC'>Termos e Condições</font> do app\ne <font fgcolor='#439CFC'>Políticas de privacidade</font></string>
+</resources>
