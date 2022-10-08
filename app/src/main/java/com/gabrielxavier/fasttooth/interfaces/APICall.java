@@ -1,5 +1,6 @@
 package com.gabrielxavier.fasttooth.interfaces;
 
+import com.gabrielxavier.fasttooth.model.Cliente;
 import com.gabrielxavier.fasttooth.model.Usuario;
 
 import java.util.List;
@@ -26,4 +27,6 @@ public interface APICall {
 
     // Cliente
 
+    @POST("clientes/cadastrar")
+    Call<Cliente> newCliente(@Body Cliente cliente);
 }

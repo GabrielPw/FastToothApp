@@ -58,7 +58,7 @@
             android:drawableStart="@drawable/ic_person_24_gray"
             android:ems="10"
             android:hint="CPF"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textColor="@color/black"
             android:textColorHint="@android:color/darker_gray"
             android:textSize="16sp"
@@ -75,7 +75,7 @@
             android:drawableStart="@drawable/ic_person_24_gray"
             android:ems="10"
             android:hint="confirme seu CPF"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:textColor="@color/black"
             android:textColorHint="@android:color/darker_gray"
             android:textSize="16sp"
@@ -117,5 +117,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGenerateCPF"
+        android:layout_width="54dp"
+        android:layout_height="42dp"
+        android:backgroundTint="#D8D8D8"
+        android:onClick="generateCPF"
+        android:paddingRight="10px"
+        app:icon="@drawable/dice_ic"
+        app:iconGravity="start"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

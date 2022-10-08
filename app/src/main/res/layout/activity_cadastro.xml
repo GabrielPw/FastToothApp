@@ -75,6 +75,10 @@
         <EditText
             android:id="@+id/etNascimento"
             android:layout_width="match_parent"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30px"
             android:background="@drawable/et_bottomline"
