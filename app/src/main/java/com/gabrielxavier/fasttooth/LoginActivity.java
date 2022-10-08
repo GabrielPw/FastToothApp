@@ -2,9 +2,11 @@ package com.gabrielxavier.fasttooth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -69,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
                     } else if (response.code() == 404){
                         System.out.println("Usuário não encontrado.");
-                        tvErrorLoging.setText("*CPF ou senha inválidos. Certifique-se que você já esteja\n registrado(a) para fazer login");
+                        tvErrorLoging.setText("*CPF ou senha inválidos.");
                     }
                 }
 
@@ -84,6 +86,10 @@ public class LoginActivity extends AppCompatActivity {
 
             tvErrorLoging.setText("*Preencha os campos acima para proceder.");
         }
+        // Minimiza o teclado quando usuário clicar no botão.
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(etLoginSenha.getWindowToken(), 0);
+        imm.hideSoftInputFromWindow(etLoginCPF.getWindowToken(), 0);
 
     }
 

@@ -98,7 +98,7 @@
             android:drawableStart="@drawable/ic_lock_24"
             android:ems="10"
             android:hint="Senha"
-            android:inputType="textPassword|numberPassword"
+            android:inputType="textPersonName"
             android:textColor="@color/black"
             android:textColorHint="@android:color/darker_gray" />
 
