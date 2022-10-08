@@ -23,4 +23,7 @@
     <string name="ScreenRegister_TermsAndPolicy">Eu aceito os <font fgcolor='#439CFC'>Termos e Condições</font> do app\ne <font fgcolor='#439CFC'>Políticas de privacidade</font></string>
 
 
+    <!--  -->
+    <string name="horario_funcionamento_semana"><b>Seg à sex:</b>\ndas 8h às 20h</string>
+    <string name="horario_funcionamento_sabado"><b>Sábado:</b>\ndas 8h às 16h</string>
 </resources>
