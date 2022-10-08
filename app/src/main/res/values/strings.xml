@@ -1,8 +1,26 @@
 <resources>
+
     <string name="app_name">FastTooth</string>
-    <string name="cadastro_cpf_info">Confirme o seu CPF para checarmos\n se você já possui cadastro</string>
-    <string name="possui_conta">Já possui conta? <font fgcolor='#439CFC'> Faça login aqui</font></string>
+
+    <!-- -Tela Inicio (Tela de inserção do CPF ) -->
+    <string name="ScreenMain_Title">Coloque seu CPF</string>
+    <string name="ScreenMain_Description">Confirme o seu CPF para checarmos\n se você já possui cadastro</string>
+    <string name="ScreenMain_AlreadyHaveAccount">Já possui conta?</string>
+    <string name="ScreenMain_Login"><font fgcolor='#439CFC'> Faça login aqui</font></string>
 
     <string name="mensagem_cadastro">Tornando seu sorriso mais saudável\nsem nenhuma dificuldade</string>
-    <string name="termos_politica">Eu aceito os <font fgcolor='#439CFC'>Termos e Condições</font> do app\ne <font fgcolor='#439CFC'>Políticas de privacidade</font></string>
+
+
+    <!-- Tela Login -->
+    <string name="ScreenLogin_Title">Login</string>
+    <string name="ScreenLogin_Descripton">Digite seu CPF e senha para acessar\nsua conta no FastTooth</string>
+    <string name="ScreenLogin_FieldPassword">senha</string>
+    <string name="ScreenLogin_BtnEnter">Entrar</string>
+    <string name="ScreenLogin_ForgetPassword"><font fgcolor='#439CFC'>Esqueceu sua senha?</font></string>
+    <string name="ScreenLogin_Register"><font fgcolor='#439CFC'>Cadastre-se aqui</font></string>
+
+    <!-- Tela Registro -->
+    <string name="ScreenRegister_TermsAndPolicy">Eu aceito os <font fgcolor='#439CFC'>Termos e Condições</font> do app\ne <font fgcolor='#439CFC'>Políticas de privacidade</font></string>
+
+
 </resources>

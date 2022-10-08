@@ -48,4 +48,14 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     // Dont forget to change the minSDK (above) to 16, ok?;
+
+    //bottom navigation
+    implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
+
+    /*image slider, carrosel de fotos*/
+    implementation 'com.romandanylyk:pageindicatorview:1.0.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.1'
+    implementation 'com.github.bumptech.glide:glide:4.14.1'
+    /*carrosel de fotos*/
 }

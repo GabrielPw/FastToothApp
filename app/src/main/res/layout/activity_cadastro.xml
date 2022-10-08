@@ -98,7 +98,7 @@
             android:drawableStart="@drawable/ic_lock_24"
             android:ems="10"
             android:hint="Senha"
-            android:inputType="textPersonName"
+            android:inputType="textPassword|numberPassword"
             android:textColor="@color/black"
             android:textColorHint="@android:color/darker_gray" />
 
@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20px"
             android:layout_marginBottom="40px"
-            android:text="@string/termos_politica"
+            android:text="@string/ScreenRegister_TermsAndPolicy"
             android:textColor="@color/black"
             android:textStyle="bold" />
 

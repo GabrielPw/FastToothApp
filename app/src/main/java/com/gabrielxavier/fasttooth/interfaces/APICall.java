@@ -7,6 +7,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.HTTP;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -24,6 +25,10 @@ public interface APICall {
 
     @POST("usuarios/newUsuario")
     Call<Usuario> newUsuario(@Body Usuario usuario);
+
+    @POST("usuarios/login")
+    Call<Usuario> login(@Body Usuario usuario);
+
 
     // Cliente
 

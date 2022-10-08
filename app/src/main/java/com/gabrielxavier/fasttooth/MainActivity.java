@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.gabrielxavier.fasttooth.interfaces.APICall;
 import com.gabrielxavier.fasttooth.model.Usuario;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.time.Clock;
@@ -26,6 +28,7 @@ import java.util.Locale;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,20 +42,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvErrorMessage;
 
     String cpfAleatorio = "";
-    ArrayList<String> listaCpf = new ArrayList<>(Arrays.asList("83802010000", "48826197091","81225616085",
-                                                                "70865980039","13136397029", "00975313088",
-                                                                "07006723035", "32414157089", "11177844010",
-                                                                "33638734099", "39305794050", "70613367065",
-                                                                "53644397040", "07642620098", "92917988002",
-                                                                "97096931074", "54139863005", "94765573036",
-                                                                "11717884016", "14951476061", "41101244097",
-                                                                "65172721002", "90115395083", "45246481000",
-                                                                "14169983068", "23168516066", "47782930022",
-                                                                "25763220005", "46564550081", "38160124007",
-                                                                "59312516000", "49487905081", "58191844087",
-                                                                "02837183075", "10615925022", "84729169018",
-                                                                "99017139005", "70242953093", "41368520022",
-                                                                "88433565001", "05691707027", "66596390047"));
+    GeradorCPF geradorCPF = new GeradorCPF();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,9 +111,15 @@ public class MainActivity extends AppCompatActivity {
         //Retrofit Builder.
         // Especificando a URL base e convertendo o Gson.
 
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
+
+        OkHttpClient client = new OkHttpClient();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://clinica-api-tcc.herokuapp.com/")
-                .addConverterFactory(GsonConverterFactory.create())
+                .client(client)
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
         // Instacia da interface;
@@ -145,16 +141,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void generateCPF(View view){
+        cpfAleatorio = geradorCPF.generateCPF();
+    }
 
-        Random random = new Random();
+    public void possuiLogin(View view){
 
-        int indice = random.nextInt(listaCpf.size() - 1);
-
-        cpfAleatorio = listaCpf.get(indice);
-        listaCpf.remove(indice);
-
-        etCPF.setText(cpfAleatorio);
-        etConfirmaCPF.setText(cpfAleatorio);
-
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 }

@@ -16,6 +16,12 @@
         android:theme="@style/Theme.FastTooth"
         tools:targetApi="31">
         <activity
+            android:name=".InicioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".cadastro_activity"
             android:exported="false" />
         <activity

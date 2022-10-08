@@ -111,14 +111,14 @@ public class cadastro_activity extends AppCompatActivity {
                         // Adaptando o formato da data para o que é requerido pelo JSON da API.
                         String data = etDataNascimento.getText().toString();
 
-                        List totalChars = new ArrayList();
+                        List totalChars = new ArrayList(); // Essa lista irá guardar os caracteres do texto do Campo de data.
 
-                        for(int i = 0; i < data.length(); i++){
+                        for(int i = 0; i < data.length(); i++){ // Adicionando os caracteres na lista criada acima.
                             totalChars.add(data.charAt(i));
                         }
 
                         System.out.println("\n\n");
-                        for (int i = 0; i < totalChars.size(); i++){
+                        for (int i = 0; i < totalChars.size(); i++){    // exibindo oque tem na lista.
                             System.out.print(totalChars.get(i));
                         }
                         System.out.println("\n\n");
@@ -182,12 +182,14 @@ public class cadastro_activity extends AppCompatActivity {
 
     void camposPreenchidos(){
 
+        // subistitui espaços em branco deixados pelo usuário nos campos de textos.
         nome = etNome.getText().toString().replaceAll("\\s+","");
         telefone = etTelefone.getText().toString().replaceAll("\\s+","");
         email = etEmail.getText().toString().replaceAll("\\s+","");
         nascimento = etDataNascimento.getText().toString().replaceAll("\\s+","");
         senha = etSenha.getText().toString().replaceAll("\\s+","");
 
+        // Verifica se o usuário deixou os campos totalmente em branco.
         if (nome.matches("") || telefone.matches("") || email.matches("") || nascimento.matches("") || senha.matches("")){
             camposPreenhidos = false;
         } else { camposPreenhidos = true;}
@@ -199,6 +201,9 @@ public class cadastro_activity extends AppCompatActivity {
 
     void configurarRetrofit(){
 
+        // Esse método cria e define algumas configurações usadas na biblioteca retrofit.
+        // Configurando a URL base da Api, etc.
+
         //Retrofit Builder.
         // Especificando a URL base e convertendo o Gson.
 
@@ -207,7 +212,7 @@ public class cadastro_activity extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        // Instacia da interface;
+        // Instacia da interface (será usada para chamar os métodos GET, POST, etc.)
         apiCall = retrofit.create(APICall.class);
     }
 
