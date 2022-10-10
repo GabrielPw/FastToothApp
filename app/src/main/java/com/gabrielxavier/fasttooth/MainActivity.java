@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                         System.out.println("\n\nError --> " + error);
 
                         if (error.matches("CPF INSERIDO É INVÁLIDO")){
+                            etCPF.setError("CPF INSERIDO É INVÁLIDO");
                             tvErrorMessage.setText("*Cpf inserido é inválido."); // Exibe erro para o cliente (CPF inválido);
                         } else if (error.matches("CPF inserido não foi encontrado")){
                             Intent intent = new Intent(MainActivity.this, cadastro_activity.class);

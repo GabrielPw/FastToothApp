@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InicioActivity"
-    android:background="#e2e2e2">
+    android:background="#e2e2e2"
+    tools:context=".InicioActivity">
 
 
     <ScrollView
@@ -23,22 +22,45 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <!--  Container do cabeçalho principal da pagina  -->
+            <!-- container da parte acesso rapido-->
+
             <LinearLayout
                 android:id="@+id/carroselContainer_inicio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/black"
+                android:layout_width="418dp"
+                android:layout_height="300dp"
+                android:layout_marginEnd="4dp"
+                android:background="#E2000000"
+                android:gravity="top"
                 android:orientation="vertical"
+                android:padding="10px"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
                 <!--  Container horizontal para texto de indicacao da pagina e duvidas -->
+
+                <!-- Carrosel de fotos do cabeçalho -->
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/pageIndicator_carrosel_inicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5px"
+                    android:padding="5dp"
+                    android:paddingBottom="20px"
+                    app:piv_animationType="worm"
+                    app:piv_dynamicCount="true"
+                    app:piv_interactiveAnimation="true"
+                    app:piv_selectedColor="@color/white"
+                    app:piv_unselectedColor="#90a4ae"
+                    app:piv_viewPager="@id/viewPager_carroselFotos_inicio" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:paddingStart="40dp"
-                    android:paddingTop="20dp"
+                    android:paddingTop="10dp"
                     android:paddingEnd="40dp">
 
                     <TextView
@@ -46,7 +68,7 @@
                         android:layout_height="wrap_content"
                         android:text="inicio"
                         android:textColor="@color/white"
-                        android:textSize="32dp"
+                        android:textSize="28dp"
                         android:textStyle="bold" />
                     <!-- Gambiarra para colocar icone de duvidas no final a direita-->
                     <LinearLayout
@@ -62,29 +84,20 @@
                             android:backgroundTint="@color/white" />
                     </LinearLayout>
                 </LinearLayout>
-                <!-- Carrosel de fotos do cabeçalho -->
+
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/viewPager_carroselFotos_inicio"
                     android:layout_width="match_parent"
-                    android:layout_height="270dp"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="40dp" />
-                <!-- Indicador do carrosel de fotos-->
-                <com.rd.PageIndicatorView
-                    android:id="@+id/pageIndicator_carrosel_inicio"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:padding="10dp"
-                    app:piv_animationType="worm"
-                    app:piv_dynamicCount="true"
-                    app:piv_interactiveAnimation="true"
-                    app:piv_selectedColor="@color/white"
-                    app:piv_unselectedColor="#90a4ae"
-                    app:piv_viewPager="@id/viewPager_carroselFotos_inicio" />
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="40dp">
+
+                </androidx.viewpager.widget.ViewPager>
+                <!-- Indicador do carrosel de fotos-->
             </LinearLayout>
-            <!-- container da parte acesso rapido-->
+
             <LinearLayout
                 android:id="@+id/acessoRapidocontainer_inicio"
                 android:layout_width="match_parent"
@@ -120,7 +133,7 @@
                             android:layout_width="135dp"
                             android:layout_height="100dp"
                             android:background="@drawable/container_arredondado_sem_bordas"
-                            android:backgroundTint="#1574F8"
+                            android:backgroundTint="#1570F8"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
                             android:padding="10dp">
@@ -617,17 +630,17 @@
         android:id="@+id/bottomNavigatio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mbn_circleColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:mbn_backgroundBottomColor="#FFFFFF"
+        app:mbn_circleColor="#ffffff"
         app:mbn_countBackgroundColor="#ff6f00"
         app:mbn_countTextColor="#ffffff"
+
         app:mbn_defaultIconColor="#90a4ae"
         app:mbn_rippleColor="#1D16EB"
         app:mbn_selectedIconColor="#90a4ae"
-        app:mbn_shadowColor="#8C1574F6"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:mbn_shadowColor="#8C1574F6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
