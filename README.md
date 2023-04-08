@@ -56,4 +56,4 @@ Qualquer aparelho android|
 <br>
 
 <a href="linkedin.com/in/gabriel-xavier-a5b762242">Gabriel Xavier - Linkedln</a>
-<a href="https://www.linkedin.com/in/luiz-fernando-pegorari-78b853225/">Luiz Fernando Pegorari - Linkedln</a>
+<p><a href="https://www.linkedin.com/in/luiz-fernando-pegorari-78b853225/">Luiz Fernando Pegorari - Linkedln</a></p>
